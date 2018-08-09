@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <style>
+        button {
+            height: 30px;
+            width: 100px;
+            outline: none;
+            margin: 10px;
+        }
+        #background_preview{
+            border:solid;
+            width:100px;
+            height:25px;
+        }
+        #header_preview{
+            border:solid;
+            width:100px;
+            height:25px;
+        }
+        #border_preview{
+            border:solid;
+            width:100px;
+            height:25px;
+        }
+        #footer_preview{
+            border:solid;
+            width:100px;
+            height:25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="option_wrap">
+        <div id="deleteWrap">
+        <p>Delete All Entries</p>
+        <button type="button" id="deleteAll" class="btn btn-secondary">Delete All </button>
+        </div>
+
+        <table id="option_table">
+            <tr>
+                <td class="head">Change Background Color:</td>
+                <td class="head">Change Header Font Color:</td>
+                <td class="head">Change Border Color:</td>
+                <td class="head">Change Footer Color</td>
+            </tr>
+            <tr>
+                <td>
+                    <canvas id="background" class="color-canvas" width="125" height="125" border-radius="50%"></canvas>
+                </td>
+                <td>
+                    <canvas id="header" class="color-canvas" width="125" height="125" border-radius="50%"></canvas>
+                </td>
+                <td>
+                    <canvas id="border" class="color-canvas" width="125" height="125" border-radius="50%"></canvas>
+
+                </td>
+                <td>
+                    <canvas id="footer_color" class="color-canvas" width="125" height="125" border-radius="50%"></canvas>
+                
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Preview:
+                    <p class="preview" id="background_preview"></p>
+                </td>
+                <td>
+                    Preview:
+                    <p class="preview" id="header_preview"></p>
+                </td>
+                <td>
+                    Preview:
+                    <p class="preview" id="border_preview"></p>
+            
+                </td>
+                <td>
+                    Preview:
+                    <p class="preview" id="footer_preview"></p>
+            
+                </td>
+            </tr>
+        </table>
+        <button type="button" class="btn btn-secondary" id="save_button">Save Changes</button>
+        <!-- <button type="button" class="btn btn-secondary" id="restore">Restore Defaults</button> -->
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>
